@@ -1,3 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./scss/reset.scss";
 @import "./scss/variables.scss";
+
+body,
+input,
+button {
+  font-family: $font-family;
+  font-size: 16px;
+}
