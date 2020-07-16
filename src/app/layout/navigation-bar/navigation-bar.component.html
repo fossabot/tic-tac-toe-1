@@ -27,7 +27,29 @@
             Log in
           </a>
         </li>
+        <li class="nav-item nav-hamburger-container" (click)="toggleSidebar()">
+          <div class="nav-hamburger"></div>
+        </li>
       </div>
     </ul>
   </div>
+</nav>
+
+<nav class="sidenav-container" [class.active]="sidebarState">
+  <ul class="sidenav-list">
+    <li class="sidenav-item" *ngFor="let option of options">
+      <a
+        [routerLink]="[option.link]"
+        title="[option.name]"
+        class="sidenav-link"
+      >
+        {{ option.name }}
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a routerLink="/login" title="Login" class="sidenav-link">
+        Log in
+      </a>
+    </li>
+  </ul>
 </nav>

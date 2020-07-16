@@ -32,6 +32,10 @@
     &.nav-logo {
       margin-right: 35px;
     }
+
+    &.nav-hamburger-container {
+      display: none;
+    }
   }
 
   &-link {
@@ -53,7 +57,107 @@
   }
 }
 
+.sidenav-container {
+  display: none;
+}
+
 .wrapper {
-  width: $large-breakpoint;
+  max-width: $xlarge-breakpoint;
   margin: 0 auto;
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .wrapper {
+    margin: 0 12px;
+  }
+
+  .nav {
+    &-item {
+      display: none;
+
+      &.nav-logo,
+      &.nav-hamburger-container {
+        display: unset;
+      }
+    }
+
+    &-hamburger {
+      width: 30px;
+      height: 3px;
+      background-color: black;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: black;
+      }
+
+      &:before {
+        top: -9px;
+      }
+
+      &:after {
+        top: 9px;
+      }
+
+      &-container {
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sidenav {
+    &-container {
+      display: unset;
+      width: 400px;
+      height: 100vh;
+      position: fixed;
+      right: -400px;
+      top: 0;
+      transition: right 250ms;
+      background-color: white;
+      box-shadow: $shadow-color 0 0 20px;
+
+      &.active {
+        right: 0;
+      }
+    }
+
+    &-list {
+      padding: 6px 12px;
+      margin-top: 50px;
+    }
+
+    &-item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+
+    &-link {
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 250ms, background-color 250ms;
+      border-radius: 5px;
+      padding: 6px 4px;
+
+      &:link,
+      &:visited {
+        color: $navitem-color;
+      }
+
+      &:hover,
+      &:active {
+        color: $navitem-hover;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
 }

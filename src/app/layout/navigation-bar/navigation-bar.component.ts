@@ -12,4 +12,9 @@ export class NavigationBarComponent {
     { name: 'Tournaments', link: '/tournaments' },
     { name: 'Leaderboard', link: '/leaderboard' },
   ];
+
+  public sidebarState: boolean = false;
+  public toggleSidebar(): void {
+    this.sidebarState = !this.sidebarState;
+  }
 }
