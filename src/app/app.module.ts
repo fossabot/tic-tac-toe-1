@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,7 @@ import { NavigationBarComponent } from './layout/navigation-bar/navigation-bar.c
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
