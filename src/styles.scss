@@ -8,3 +8,18 @@ button {
   font-family: $font-family;
   font-size: 16px;
 }
+
+body {
+  margin-top: 60px;
+}
+
+.wrapper {
+  max-width: $xlarge-breakpoint;
+  margin: 0 auto;
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .wrapper {
+    margin: 0 12px;
+  }
+}

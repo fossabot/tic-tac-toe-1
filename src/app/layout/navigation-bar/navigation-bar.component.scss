@@ -61,16 +61,7 @@
   display: none;
 }
 
-.wrapper {
-  max-width: $xlarge-breakpoint;
-  margin: 0 auto;
-}
-
 @media (max-width: $xlarge-breakpoint) {
-  .wrapper {
-    margin: 0 12px;
-  }
-
   .nav {
     &-item {
       display: none;
