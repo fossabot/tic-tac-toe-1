@@ -1,0 +1,18 @@
+// Site font
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+// Site colors
+$accent-color: #188aa3;
+$secondary-color: #e9e9e9;
+$container-color: #e0e0e0;
+$stroke-color: $container-color;
+
+$navitem-color: rgba(0, 0, 0, 0.65);
+$navitem-hover: black;
+
+// Breakpoints
+$small-breakpoint: 576px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 992px;
+$xlarge-breakpoint: 1200px;
