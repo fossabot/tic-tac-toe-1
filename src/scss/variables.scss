@@ -4,9 +4,17 @@ $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 
 // Site colors
 $accent-color: #188aa3;
+$accent-hover: #116b80;
+$accent-opacity: #1889a36e;
+
 $secondary-color: #e9e9e9;
-$container-color: #e0e0e0;
+$secondary-hover: #d6d6d6;
+
+$container-color: #f4f4f4;
 $stroke-color: $container-color;
+
+$input-color: #818181;
+$input-border: #e0e0e0;
 
 $navitem-color: rgba(0, 0, 0, 0.65);
 $navitem-hover: black;
