@@ -57,7 +57,8 @@
   }
 }
 
-.sidenav-container {
+.sidenav-container,
+.black {
   display: none;
 }
 
@@ -100,22 +101,28 @@
         cursor: pointer;
       }
     }
+
+    &-contain {
+      display: unset;
+    }
   }
 
   .sidenav {
     &-container {
       display: unset;
       max-width: 400px;
+      min-width: 250px;
+      margin-top: 10px;
       height: 100vh;
       position: fixed;
-      right: -400px;
+      left: -400px;
       top: 0;
-      transition: right 250ms;
+      transition: left 250ms;
       background-color: white;
-      box-shadow: $shadow-color 0 0 20px;
+      z-index: 1100;
 
       &.active {
-        right: 0;
+        left: 0;
       }
     }
 
@@ -149,6 +156,24 @@
         color: $navitem-hover;
         background-color: rgba(0, 0, 0, 0.05);
       }
+    }
+  }
+
+  .black {
+    display: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

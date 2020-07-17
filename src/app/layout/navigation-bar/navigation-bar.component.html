@@ -2,6 +2,9 @@
   <div class="wrapper">
     <ul class="nav-list">
       <div class="nav-column">
+        <li class="nav-item nav-hamburger-container" (click)="toggleSidebar()">
+          <div class="nav-hamburger"></div>
+        </li>
         <li class="nav-item nav-logo">
           <a routerLink="/" title="Homepage">
             <img
@@ -22,13 +25,10 @@
         </li>
       </div>
       <div class="nav-column">
-        <li class="nav-item">
+        <li class="nav-item nav-contain">
           <a routerLink="/login" title="Login" class="nav-link">
             Log in
           </a>
-        </li>
-        <li class="nav-item nav-hamburger-container" (click)="toggleSidebar()">
-          <div class="nav-hamburger"></div>
         </li>
       </div>
     </ul>
@@ -40,16 +40,13 @@
     <li class="sidenav-item" *ngFor="let option of options">
       <a
         [routerLink]="[option.link]"
-        title="[option.name]"
+        [title]="[option.name]"
         class="sidenav-link"
       >
         {{ option.name }}
       </a>
     </li>
-    <li class="sidenav-item">
-      <a routerLink="/login" title="Login" class="sidenav-link">
-        Log in
-      </a>
-    </li>
   </ul>
 </nav>
+
+<div class="black" [class.active]="sidebarState"></div>
