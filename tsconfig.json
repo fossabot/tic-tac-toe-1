@@ -13,9 +13,10 @@
     "target": "es2015",
     "lib": ["es2018", "dom"],
     "paths": {
+      "@api/*": ["src/api/*"],
       "@app/*": ["src/app/core/*"],
       "@shared/*": ["src/app/shared/*"],
-      "@env/*": ["src/environments/environment"],
+      "@env": ["src/environments/environment"],
       "@modules/*": ["src/app/module/*"],
       "@data/*": ["src/app/data/*"]
     }
