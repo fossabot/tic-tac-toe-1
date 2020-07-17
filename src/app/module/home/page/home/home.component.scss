@@ -1,0 +1,135 @@
+@import "../../../../../scss/variables.scss";
+
+.heading {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 130%;
+
+  .primary {
+    color: $accent-color;
+  }
+}
+
+.description {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  margin-right: 20px;
+
+  &:first-child {
+    width: 40%;
+  }
+
+  &:last-child {
+    width: 60%;
+    margin-right: unset;
+  }
+}
+
+.box {
+  background-color: $container-color;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  padding: 36px;
+
+  &-heading {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  &-input {
+    background-color: white;
+    border: 1px solid $input-border;
+    border-radius: 5px;
+    padding: 6px 16px;
+    font-weight: 400;
+    color: $input-color;
+    margin-bottom: 20px;
+    transition: box-shadow 250ms;
+
+    &:focus {
+      box-shadow: $accent-opacity 0 0 2px 2px;
+    }
+  }
+
+  &-button {
+    background-color: $secondary-color;
+    border-radius: 5px;
+    border: unset;
+    font-weight: 500;
+    padding: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 250ms;
+
+    &:hover,
+    &:active {
+      background-color: $secondary-hover;
+    }
+
+    &:last-child {
+      margin-bottom: unset;
+    }
+
+    &.primary {
+      background-color: $accent-color;
+      color: white;
+
+      &:hover,
+      &:active {
+        background-color: $accent-hover;
+      }
+    }
+  }
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100% !important;
+  }
+
+  .block {
+    display: inline-block;
+  }
+
+  .heading,
+  .description {
+    text-align: center;
+  }
+
+  .box {
+    margin-top: 20px;
+
+    &-heading {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $medium-breakpoint) {
+  .heading {
+    font-size: 36px;
+  }
+
+  .box {
+    width: 100%;
+  }
+}
