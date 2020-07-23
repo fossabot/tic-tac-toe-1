@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './page/home/home.component';
+import { ContentLayoutComponent } from '../../layout/content/content.component';
 
 export const routes: Routes = [
   {
     path: '',
+    component: ContentLayoutComponent,
     children: [
       {
         path: '',
