@@ -23,6 +23,21 @@ body {
   margin: 0 auto;
 }
 
+input,
+button {
+  transition: box-shadow 250ms;
+
+  &:focus {
+    box-shadow: $secondary-color 0 0 2px 2px;
+  }
+
+  &.primary {
+    &:focus {
+      box-shadow: $accent-opacity 0 0 2px 2px;
+    }
+  }
+}
+
 @media (max-width: $xlarge-breakpoint) {
   .wrapper {
     margin: 0 12px;

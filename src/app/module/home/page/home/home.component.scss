@@ -60,10 +60,6 @@
     color: $input-color;
     margin-bottom: 20px;
     transition: box-shadow 250ms;
-
-    &:focus {
-      box-shadow: $accent-opacity 0 0 2px 2px;
-    }
   }
 
   &-button {
