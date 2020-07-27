@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<main class="container">
+  <a routerLink="/" title="Homepage">
+    <img
+      class="auth-logo"
+      src="/assets/black_logo.svg"
+      alt="Logo of TicTacToe"
+      routerLink="/"
+      height="40px"
+    />
+  </a>
+  <article class="auth-box">
+    <router-outlet></router-outlet>
+    <a class="auth-link" routerLink="/" title="Homepage">Return to homepage</a>
+  </article>
+</main>
