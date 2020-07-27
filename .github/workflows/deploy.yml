@@ -1,0 +1,25 @@
+name: Deploy application to the server
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy application to the server
+        uses: appleboy/ssh-action@master
+
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd ~/tic-tac-toe/
+            git pull origin master
+            npm install
+            npm run build:ssr
+            screen -S app -X quit
+            screen -S app -d -m npm run serve:ssr
