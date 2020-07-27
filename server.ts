@@ -16,6 +16,8 @@ import * as cors from 'cors';
 
 import { MONGODB_URI } from '@api/util/secrets';
 
+import api from '@api/routes';
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
   const server = express();
@@ -45,8 +47,9 @@ export function app() {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
+  // REST API endpoints
+  server.use('/api/**', api);
+
   // Serve static files from /browser
   server.get(
     '*.*',
